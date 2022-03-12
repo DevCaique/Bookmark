@@ -76,8 +76,9 @@
         cursor: pointer;
     }
 
-    .hamburger-btn.active{
-        filter: invert(100%) sepia(0%) saturate(3619%) hue-rotate(167deg) brightness(101%) contrast(103%);
+    .hamburger-btn-open.disabled,
+    .hamburger-btn-close.disabled{
+        display: none;
     }
 
 }

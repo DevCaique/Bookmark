@@ -30,7 +30,8 @@ export function Navbar () {
                 </ul>
 
                 <div onClick={handleClick} className="nav-hamburger-container">
-                    <img className={click ? "hamburger-btn active" : "hamburger-btn"} src={HamburgerIconOpen} alt="Button" />
+                    <img className={click ? "hamburger-btn-open disabled" : "hamburger-btn-open"} src={HamburgerIconOpen} alt="Button" />
+                    <img className={click ? "hamburger-btn-close" : "hamburger-btn-close disabled"} src={HamburgerIconClose} alt="Button" />
                 </div>
 
             </nav>
