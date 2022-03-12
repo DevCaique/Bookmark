@@ -13,6 +13,15 @@
 
     .nav-logo{
         z-index: 2;
+        position: relative;
+    }
+
+    .nav-circle{
+        display: none;
+    }
+    
+    .nav-logo.active{
+        filter: invert(100%) sepia(0%) saturate(3619%) hue-rotate(167deg) brightness(101%) contrast(103%);
     }
 
     .nav-menu{
@@ -64,6 +73,11 @@
 
     .nav-hamburger-container{
         z-index: 2;
+        cursor: pointer;
+    }
+
+    .hamburger-btn.active{
+        filter: invert(100%) sepia(0%) saturate(3619%) hue-rotate(167deg) brightness(101%) contrast(103%);
     }
 
 }

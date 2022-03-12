@@ -10,7 +10,7 @@
     --clr-primary-red: hsl(0, 94%, 66%);
     --clr-primary-blue: hsl(231, 69%, 60%);
 
-    --clr-neutral-900: hsl(229, 31%, 21%);
+    --clr-neutral-900: rgb(37, 43, 70);
     --clr-neutral-500: hsl(229, 8%, 60%);
 
     /* Typography */

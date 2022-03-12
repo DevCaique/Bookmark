@@ -11,20 +11,6 @@ export function Navbar () {
 
     const handleClick = (() => setClick(!click))
 
-    function changeSrc () {
-
-        if (click) {
-
-            document.getElementById("Logo").src = "../assets/icon-close.svg"; 
-
-        } else {
-
-            document.getElementById("Logo").src = "../assets/icon-hamburger.svg"; 
-
-        }
-        
-    }
-
 
     return(
 
@@ -33,7 +19,7 @@ export function Navbar () {
             <nav className="nav container">
 
                 <div className="nav-logo-container">
-                    <img className="nav-logo" src={Logo} alt="Logo" />
+                    <img className={click ? "nav-logo active" : "nav-logo"} src={Logo} alt="Logo" />
                 </div>
 
                 <ul className={click ? "nav-menu active" : "nav-menu"}>
@@ -44,7 +30,7 @@ export function Navbar () {
                 </ul>
 
                 <div onClick={handleClick} className="nav-hamburger-container">
-                    <img id="Logo" src="" alt="HamburgerIcon" />
+                    <img className={click ? "hamburger-btn active" : "hamburger-btn"} src={HamburgerIconOpen} alt="Button" />
                 </div>
 
             </nav>
