@@ -14,6 +14,10 @@
     --clr-neutral-500: hsl(229, 8%, 60%);
 
     /* Typography */
+
+    --fz-largest: 3.052rem;
+    --fz-larger: 2.441rem;
+    --fz-large: 1.563rem;
     --fz-normal: 1.125rem;
 
     --fw-medium: 500;
@@ -27,12 +31,14 @@
     --pe-normal: 4em;
     --pe-small: 2em;
     --pe-smaller: 1em;
+    --pe-smallest: .5em;
 
     --pr-larger: 8rem;
     --pr-large: 6rem;
     --pr-normal: 4rem;
     --pr-small: 2rem;
     --pr-smaller: 1rem;
+    --pr-smallest: .5rem;
 
 }
 
@@ -55,6 +61,10 @@ body{
     font-weight: var(--fz-normal);
 }
 
+section{
+    padding-block: var(--pe-large);
+}
+
 img{
     width: 100%;
     height: auto;
@@ -70,6 +80,13 @@ a{
     text-decoration: none;
 }
 
+h1,
+h2,
+h3,
+h4{
+    line-height: 1;
+}
+
 /* ============================== CSS Reusable Classes ============================== */
 
 .container {
@@ -79,8 +96,18 @@ a{
 
 .split {
     display: flex;
+    flex-direction: column;
+    gap: 4em;
 }
 
 .split > * {
     flex-basis: 100%;
+}
+
+@media screen and (min-width: 768px) {
+
+    .split{
+        flex-direction: row;
+    }
+
 }

@@ -10,6 +10,7 @@ export function Navbar () {
     const [click, setClick] = useState(false);
 
     const handleClick = (() => setClick(!click))
+    const closeMenu = (() => setClick(false))
 
 
     return(
@@ -18,18 +19,18 @@ export function Navbar () {
         
             <nav className="nav container">
 
-                <div className="nav-logo-container">
+                <div onClick={closeMenu} className="nav-logo-container">
                     <img className={click ? "nav-logo active" : "nav-logo"} src={Logo} alt="Logo" />
                 </div>
 
-                <ul className={click ? "nav-menu active" : "nav-menu"}>
+                <ul onClick={handleClick} className={click ? "nav-menu active" : "nav-menu"}>
                     <li className="nav-item"><a href="#" className="nav-link">Features</a></li>
                     <li className="nav-item"><a href="#" className="nav-link">Pricing</a></li>
                     <li className="nav-item"><a href="#" className="nav-link">Contact</a></li>
                     <li className="nav-login">Login</li>
                 </ul>
 
-                <div onClick={handleClick} className="nav-hamburger-container">
+                <div onClick={handleClick} className={click ? "nav-hamburger-container active" : "nav-hamburger-container"}>
                     <img className={click ? "hamburger-btn-open disabled" : "hamburger-btn-open"} src={HamburgerIconOpen} alt="Button" />
                     <img className={click ? "hamburger-btn-close" : "hamburger-btn-close disabled"} src={HamburgerIconClose} alt="Button" />
                 </div>

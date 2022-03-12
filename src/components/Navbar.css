@@ -9,6 +9,11 @@
     font-size: 14px;
 }
 
+.nav-login{
+    font-weight: var(--fw-medium);
+    cursor: pointer;
+}
+
 @media screen and (max-width: 768px) {
 
     .nav-logo{
@@ -23,9 +28,9 @@
     .nav-logo.active{
         filter: invert(100%) sepia(0%) saturate(3619%) hue-rotate(167deg) brightness(101%) contrast(103%);
     }
-
+    
     .nav-menu{
-        position: absolute;
+        position: fixed;
         inset: 0;
         height: 100vh;
         width: 100vw;
@@ -72,8 +77,13 @@
     }
 
     .nav-hamburger-container{
+        right: 10%;
         z-index: 2;
         cursor: pointer;
+    }
+
+    .nav-hamburger-container.active{
+        position: fixed;
     }
 
     .hamburger-btn-open.disabled,
