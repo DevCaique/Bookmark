@@ -1,3 +1,6 @@
+import { Navbar } from './components/Navbar';
+import './App.css';
+
 export function App () {
 
     return(
@@ -5,7 +8,7 @@ export function App () {
         <>
         
             {/* amo meu amor */}
-            App Component
+            <Navbar />
         
         </>
 

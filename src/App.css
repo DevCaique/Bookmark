@@ -1,0 +1,82 @@
+/* ============================== Google Fonts ============================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap');
+
+/* ============================== CSS Variables ============================== */
+
+:root{
+
+    /* Colors */
+    --clr-primary-red: hsl(0, 94%, 66%);
+    --clr-primary-blue: hsl(231, 69%, 60%);
+
+    --clr-neutral-900: hsl(229, 31%, 21%);
+    --clr-neutral-500: hsl(229, 8%, 60%);
+
+    /* Typography */
+    --fz-normal: 1.125rem;
+
+    --fw-medium: 500;
+    --fw-normal: 400;
+
+    --ff-body: 'Rubik', sans-serif;
+
+    /* Padding */
+    --pe-larger: 8em;
+    --pe-large: 6em;
+    --pe-normal: 4em;
+    --pe-small: 2em;
+    --pe-smaller: 1em;
+
+    --pr-larger: 8rem;
+    --pr-large: 6rem;
+    --pr-normal: 4rem;
+    --pr-small: 2rem;
+    --pr-smaller: 1rem;
+
+}
+
+
+/* ============================== HTML Formating ============================== */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    line-height: 1.6;
+    font-family: var(--ff-body);
+    font-weight: var(--fz-normal);
+}
+
+img{
+    width: 100%;
+    height: auto;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+}
+
+a{
+    display: inline-block;
+    text-decoration: none;
+}
+
+/* ============================== CSS Reusable Classes ============================== */
+
+.container {
+    width: min(80%, 70rem);
+    margin-inline: auto;
+}
+
+.split {
+    display: flex;
+}
+
+.split > * {
+    flex-basis: 100%;
+}
