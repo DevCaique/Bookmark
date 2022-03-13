@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import illustrationHero from '../assets/illustration-hero.svg';
 import illustrationTab1 from '../assets/illustration-features-tab-1.svg';
 import illustrationTab2 from '../assets/illustration-features-tab-2.svg';
@@ -6,16 +7,30 @@ import { Card } from '../components/Card';
 import ChormeIcon from '../assets/logo-chrome.svg';
 import FirefoxIcon from '../assets/logo-firefox.svg';
 import OperaIcon from '../assets/logo-opera.svg';
+import ArrowIcon from '../assets/icon-arrow.svg';
 
 import './Home.css';
 
 export function Home () {
 
-    const scrollSlide1 = (() => document.getElementById('simple-bookmarking').scrollIntoView({block: "nearest"}));
-    const scrollSlide2 = (() => document.getElementById('speedy-searching').scrollIntoView({block: "nearest"}));
-    const scrollSlide3 = (() => document.getElementById('easy-sharing').scrollIntoView({block: "nearest"}));
+    // Features Section
+    const scrollSlide1 = (() => document.getElementById('simple-bookmarking').scrollIntoView({block: "nearest", behavior: "auto"}));
+    const scrollSlide2 = (() => document.getElementById('speedy-searching').scrollIntoView({block: "nearest", behavior: "auto"}));
+    const scrollSlide3 = (() => document.getElementById('easy-sharing').scrollIntoView({block: "nearest", behavior: "auto"}));
 
     let alignToTop = true;
+
+    // Asked Question Section
+    const [question1, setQuestion1] = useState(false)
+    const [question2, setQuestion2] = useState(false)
+    const [question3, setQuestion3] = useState(false)
+    const [question4, setQuestion4] = useState(false)
+
+    const turnQuestion1 = (() => setQuestion1(!question1))
+    const turnQuestion2 = (() => setQuestion2(!question2))
+    const turnQuestion3 = (() => setQuestion3(!question3))
+    const turnQuestion4 = (() => setQuestion4(!question4))
+
 
     return(
 
@@ -191,7 +206,80 @@ export function Home () {
 
 
             {/* Asked question section */}
+            <section className="asked">
 
+                <div className="asked-container container">
+
+                    <div className="asked-header narrow-container text-center">
+
+                        <h2 className="asked-title title">Frequently Asked Questions</h2>
+                        <p className="aksed-description description">Here are some of our FAQs. If you have any other questions you’d like answered please feel free to email us.</p>
+
+                    </div>
+
+                    <div className="question-content">
+                        
+                        <div className="question-item-container narrow-container">
+                            
+                            <div onClick={turnQuestion1}  className="question-header">
+                                <h3 className="question">What is bookmark?</h3>
+                                <div className="arrow-icon-container">
+                                    <img src={ArrowIcon} className={question1 ? "arrow-icon active" : "arrow-icon"} alt="Arrow Icon" />
+                                </div>
+                            </div>                
+
+                            <p className={question1 ? "awnser description active" : "awnser"}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt justo eget ultricies fringilla. Phasellus blandit ipsum quis quam ornare mattis.</p>
+
+                        </div>
+                        <div className="question-item-container narrow-container">
+
+                            <div onClick={turnQuestion2}  className="question-header">
+                                <h3 className="question">How can i request a new browser?</h3>
+                                <div className="arrow-icon-container">
+                                    <img src={ArrowIcon} className={question2 ? "arrow-icon active" : "arrow-icon"} alt="Arrow Icon" />
+                                </div>
+                            </div>
+
+                            <p className={question2 ? "awnser description active" : "awnser"}>Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdiet. Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdie tVivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.</p>
+                        </div>
+                        <div className="question-item-container narrow-container">
+                            
+                            <div onClick={turnQuestion3}  className="question-header">
+                                <h3 className="question">Is there a mobile app?</h3>
+                                <div className="arrow-icon-container">
+                                    <img src={ArrowIcon} className={question3 ? "arrow-icon active" : "arrow-icon"} alt="Arrow Icon" />
+                                </div>
+                            </div>
+
+                            <p className={question3 ? "awnser description active" : "awnser"}>Sed consectetur quam id neque fermentum accumsan. Praesent luctusvestibulum dolor, ut condimentum urna vulputate eget. Cras in ligula quis est pharetra mattis sit amet pharetra purus. Sed sollicitudin ex et ultricies bibendum.</p>
+                        </div>
+                        <div className="question-item-container narrow-container">
+
+                            <div onClick={turnQuestion4}  className="question-header">
+                                <h3 className="question">What about other Chromium browsers?</h3>
+                                <div className="arrow-icon-container">
+                                    <img src={ArrowIcon} className={question4 ? "arrow-icon active" : "arrow-icon"} alt="Arrow Icon" />
+                                </div>
+                            </div>
+
+                            <p className={question4 ? "awnser description active" : "awnser"}>Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod dui. Aliquam vitae neque eget nisl gravida pellentesque non ut velit.</p>
+                        </div>
+
+                    </div>
+
+                    <div className="info">
+
+                        <div className="info-container container text-center">
+
+                            <a className="info-item btn">More info</a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
 
         
         </>
