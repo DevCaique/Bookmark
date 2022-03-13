@@ -18,7 +18,12 @@
 
     .nav-logo{
         z-index: 2;
-        position: relative;
+    }
+
+    .nav-logo.active{
+        position: fixed;
+        width: 148px;
+        top: 2rem;
     }
 
     .nav-circle{
@@ -113,6 +118,12 @@
         color: #FFFFFF;
         padding: .5em 2em;
         border-radius: .3em;
+    }
+
+    .nav-login:hover{
+        background-color: transparent;
+        color: var(--clr-primary-red);
+        outline: 1px solid var(--clr-primary-red);
     }
 
     .nav-hamburger-container{

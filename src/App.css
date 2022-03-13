@@ -16,7 +16,7 @@
     /* Typography */
 
     --fz-largest: 3.052rem;
-    --fz-larger: 2.441rem;
+    --fz-larger: 1.953rem;
     --fz-large: 1.563rem;
     --fz-normal: 1.125rem;
 
@@ -62,7 +62,7 @@ body{
 }
 
 section{
-    padding-block: var(--pe-large);
+    padding-block: var(--pe-normal);
 }
 
 img{
@@ -94,6 +94,11 @@ h4{
     margin-inline: auto;
 }
 
+.narrow-container{
+    max-width: 40rem;
+    margin-inline: auto;
+}
+
 .split {
     display: flex;
     flex-direction: column;
@@ -110,4 +115,18 @@ h4{
         flex-direction: row;
     }
 
+}
+
+.text-center{
+    text-align: center;
+}
+
+.title{
+    color: var(--clr-neutral-900);
+    margin-bottom: var(--pe-smallest);
+}
+
+.description{
+    color: var(--clr-neutral-500);
+    margin-bottom: var(--pe-small);
 }

@@ -1,17 +1,16 @@
+/* ============================== Hero Section ============================== */
+
 .introduction-container{
     align-items: center;
 }
 
 .introduction-title{
-    color: var(--clr-neutral-900);
-    margin-bottom: var(--pe-smallest);
     font-size: var(--fz-largest);
     font-weight: var(--fw-medium);
 }
 
 .introduction-description{
     color: var(--clr-neutral-500);
-    margin-bottom: var(--pe-small);
 }
 
 .introduction-btn-container{
@@ -20,7 +19,7 @@
     gap: 2em;
 }
 
-.introduction-btn{
+.btn{
     font-weight: var(--fw-medium);
     padding: .75em 1.5em;
     border-radius: .3em;
@@ -31,9 +30,21 @@
     color: #FFFFFF;
 }
 
+.introduction-chrome-btn:hover{
+    background-color: transparent;
+    outline: 1px solid var(--clr-primary-blue);
+    color: var(--clr-primary-blue);
+}
+
 .introduction-firefox-btn{
     box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
     color: var(--clr-neutral-900);
+}
+
+.introduction-firefox-btn:hover{
+    color: var(--clr-primary-red);
+    outline: 1px solid var(--clr-primary-red);
+    box-shadow: none;
 }
 
 @media screen and (max-width: 768px) {
@@ -47,4 +58,26 @@
         justify-content: center;
     }
 
+}
+
+/* ============================== Features Section ============================== */
+
+.features-header{
+    margin-bottom: var(--pe-normal);
+}
+
+.features-title{
+    font-size: var(--fz-larger);
+    margin-bottom: var(--pe-smaller);
+}
+
+.features-item-container.split{
+    margin-block: 6em;
+    align-items: center;
+    gap: 6em;
+}
+
+.features-btn{
+    background-color: var(--clr-primary-blue);
+    color: #FFFFFF;
 }
