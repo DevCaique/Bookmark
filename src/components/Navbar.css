@@ -9,6 +9,10 @@
     font-size: 14px;
 }
 
+.nav-link{
+    cursor: pointer;
+}
+
 .nav-login{
     font-weight: var(--fw-medium);
     cursor: pointer;
@@ -45,6 +49,7 @@
         background-color: var(--clr-neutral-900);
         flex-direction: column;
         display: none;
+        z-index: 1;
     }
 
     .nav-menu.active{
@@ -110,6 +115,10 @@
 
     .nav-link{
         color: var(--clr-neutral-900);
+    }
+    
+    .nav-link:hover{
+        color: var(--clr-neutral-500);
     }
 
     .nav-login{

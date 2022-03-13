@@ -8,7 +8,7 @@ export function Footer () {
 
     return(
 
-        <footer className="footer">
+        <footer id="footer" className="footer">
             
             <div className="footer-container container">
 
@@ -27,11 +27,11 @@ export function Footer () {
                     <div className="social-container">
 
                         <div className="facebook-icon-container">
-                            <img src={FacebookIcon} alt="Facebook Icon" className="facebook-icon" />
+                            <img src={FacebookIcon} alt="Facebook Icon" className="social-icon facebook-icon" />
                         </div>
                         
                         <div className="twitter-icon-container">
-                            <img src={TwitterIcon} alt="Twitter Icon" className="twitter-icon" />
+                            <img src={TwitterIcon} alt="Twitter Icon" className="social-icon twitter-icon" />
                         </div>
 
                     </div>

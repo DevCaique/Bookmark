@@ -71,13 +71,72 @@
     margin-bottom: var(--pe-smaller);
 }
 
+.features-triggers-container{
+    display: flex;
+    justify-content: center;
+}
+
+.features-triggers-container > *{
+    cursor: pointer;
+    padding-inline: 4em;
+    padding-bottom: 2em;
+    border-bottom: 2px solid var(--clr-neutral-500);
+}
+
+.features-triggers-container > *:hover{
+    color: var(--clr-primary-red);
+    border-bottom: 2px solid var(--clr-primary-red);
+}
+
+.features-carousel{
+    display: flex;
+    overflow: hidden;
+    scroll-snap-type: x mandatory;
+}
+
+.features-carousel > * {
+    min-width: 100%;
+    scroll-snap-align: start;
+}
+
 .features-item-container.split{
-    margin-block: 6em;
+    margin-top: 4em;
     align-items: center;
-    gap: 6em;
 }
 
 .features-btn{
     background-color: var(--clr-primary-blue);
     color: #FFFFFF;
+}
+
+@media screen and (max-width: 768px) {
+
+    .features-triggers-container{
+        gap: 2em;
+        flex-direction: column;
+    }
+
+}
+
+/* ============================== Card Section ============================== */
+
+.extension-header{
+    margin-bottom: var(--pe-large);
+}
+
+.extension-item-container{
+    width: 95%;
+    margin-inline: auto;
+    display: flex;
+    justify-content: center;
+    gap: 1.5em;
+    margin-block: var(--pe-normal);
+}
+
+@media screen and (max-width: 768px) {
+
+    .extension-item-container{
+        flex-direction: column;
+    }
+
 }

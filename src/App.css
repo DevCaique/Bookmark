@@ -7,7 +7,7 @@
 :root{
 
     /* Colors */
-    --clr-primary-red: hsl(0, 94%, 66%);
+    --clr-primary-red: rgb(250, 87, 87);
     --clr-primary-blue: hsl(231, 69%, 60%);
 
     --clr-neutral-900: rgb(37, 43, 70);
@@ -53,6 +53,7 @@
 
 html{
     -webkit-tap-highlight-color: transparent;
+    scroll-behavior: smooth;
 }
 
 body{
@@ -95,7 +96,7 @@ h4{
 }
 
 .narrow-container{
-    max-width: 40rem;
+    max-width: 30rem;
     margin-inline: auto;
 }
 

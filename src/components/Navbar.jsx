@@ -12,6 +12,9 @@ export function Navbar () {
     const handleClick = (() => setClick(!click))
     const closeMenu = (() => setClick(false))
 
+    const scrollToFeatures = (() => document.getElementById('features').scrollIntoView());
+    const scrollToExtension = (() => document.getElementById('extension').scrollIntoView());
+    const scrollToFooter = (() => document.getElementById('footer').scrollIntoView());
 
     return(
 
@@ -24,9 +27,9 @@ export function Navbar () {
                 </div>
 
                 <ul onClick={handleClick} className={click ? "nav-menu active" : "nav-menu"}>
-                    <li className="nav-item"><a href="#" className="nav-link">Features</a></li>
-                    <li className="nav-item"><a href="#" className="nav-link">Pricing</a></li>
-                    <li className="nav-item"><a href="#" className="nav-link">Contact</a></li>
+                    <li className="nav-item"><a onClick={scrollToFeatures} className="nav-link">Features</a></li>
+                    <li className="nav-item"><a onClick={scrollToExtension} className="nav-link">Pricing</a></li>
+                    <li className="nav-item"><a onClick={scrollToFooter} className="nav-link">Contact</a></li>
                     <li className="nav-login">Login</li>
                 </ul>
 
