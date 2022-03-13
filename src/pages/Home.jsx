@@ -79,10 +79,6 @@ export function Home () {
 
                         <div className="features-item-container split">
 
-                            <div className="features-item-img-container">
-                                <img src={illustrationTab2} alt="Illustration Tab 1" className="features-img" />
-                            </div>
-
                             <div className="features-item-text">
 
                                 <h2 className="features-item-title title">Intelligent search</h2>
@@ -92,6 +88,10 @@ export function Home () {
                                     <a href="#" className="features-btn btn">More info</a>
                                 </div>
 
+                            </div>
+
+                            <div className="features-item-img-container">
+                                <img src={illustrationTab2} alt="Illustration Tab 1" className="features-img" />
                             </div>
 
                         </div>
