@@ -16,10 +16,10 @@ Além disto é bom ter um editor de código para trabalhar com o código como [V
 
 ```bash
 # Clone esse repositório
-$ git clone <https://github.com/DevCaique/Dashborad>
+$ git clone <https://github.com/DevCaique/Bookmark>
 
 # Acesse a pasta do projeto no terminal/cmd
-$ cd Dashboard
+$ cd Bookmark
 
 # Instale as dependências
 $ yarn
