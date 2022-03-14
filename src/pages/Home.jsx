@@ -281,6 +281,27 @@ export function Home () {
 
             </section>
 
+
+            {/* Sign */}
+            <section className="sign">
+
+                <div className="sign-container narrow-container text-center">
+
+                    <p className="joined">35,000+ already joined</p>
+
+                    <p className="stay-up">Stay up-to-date with what we’re doing</p>
+
+                    <form action="get" className="form">
+
+                        <input className="email btn" type="email" name="email" id="email" placeholder="Enter your email adress" />
+                        <input className="sign-btn btn" type="submit" value="Contact Us" />
+
+                    </form>
+
+                </div>
+
+            </section>
+
         
         </>
 
