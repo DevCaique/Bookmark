@@ -85,8 +85,8 @@
 
 .features-triggers-container > *:hover{
     color: var(--clr-primary-red);
-    padding-bottom: 2px;
-    border-bottom: 4px solid var(--clr-primary-red);
+    padding-bottom: -2px;
+    border-bottom: 2px solid var(--clr-primary-red);
 }
 
 .features-carousel{
